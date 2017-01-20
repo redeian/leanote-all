@@ -1,12 +1,12 @@
 # leanote
-app=Leanote
+app=MAI-Writer
 moto=Not Just A Notepad!
-moto2=Knowledge, Blog, Sharing, Cooperation... all in Leanote
+moto2=Knowledge, Blog, Sharing, Cooperation... all in MAI-Writer
 moto3=Brief But Not Simple
-fork github=Fork Leanote on Github
+fork github=Fork MAI-Writer on Github
 
 # Home
-openSource=leanote.org
+openSource=MAI-Writer.org
 forgetPassword = Forget password?
 or=or
 try=Try it
@@ -15,18 +15,18 @@ usernameOrEmail=Username or email
 password=Password
 home=Home
 desktopApp=App
-aboutLeanote=About Leanote
+aboutLeanote=About MAI-Writer
 suggestions=Suggestions
 yourSuggestions=Suggestions
 leanoteBlog=Blog
 knowledge=Knowledge
-knowledgeInfo=Use Leanote as a note, manage your knowledge in Leanote.
+knowledgeInfo=Use MAI-Writer as a note, manage your knowledge in MAI-Writer.
 share=Share
-shareInfo=Share your knowledge to your friends in Leanote.
+shareInfo=Share your knowledge to your friends in MAI-Writer.
 cooperation=Cooperation
 cooperationInfo=Collaborate with friends to improve your knowledge.
 blog=Blog
-blogInfo=You can public your knowledge and leanote is your blog!
+blogInfo=You can public your knowledge and MAI-Writer is your blog!
 suggestionsInfo=help us to improve our service.
 yourContact=Your contact
 emailOrOthers=Email or other contact way
@@ -163,7 +163,7 @@ blogSet=Blog Settings
 # index
 discussion=Discussion
 download=Download
-howToInstallLeanote=How to install leanote
+howToInstallLeanote=How to install MAI-Writer
 
 # 
 attachments = Attachments
@@ -245,7 +245,7 @@ errorDomain=The custom domain is invalid, eg. www.myblog.com
 domainExisted=Custom domain is already existed
 errorSubDomain=Please input the valid sub domain, the length is at least 4 and no special chars
 subDomainExisted=Sub domain is already existed
-domainNotPointToLeanote=The custom domin hasn't pointed to d.leanote.com
+domainNotPointToLeanote=The custom domin hasn't pointed to d.MAI-Writer.com
 errorPerPageSize=Page size is error
 errorSortField=Sort Field is error
 themeValidHasRoundInclude=WARNING: Templates have circular references!

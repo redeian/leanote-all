@@ -33,14 +33,13 @@ Note.notebookIds = {}; // notebookId => true
 
 Note.isReadOnly = false;
 // 定时保存信息
-Note.intervalTime = 600 * 000; // 600s, 10mins
-Note.intervalTime = 10 * 1000; // 10s
+Note.intervalTime = 300 * 1000; // 300s, 5mins
 Note.startInterval = function() {
 	clearInterval(Note.interval);
 	Note.interval = setInterval(function() {
 		log("自动保存开始...");
 		Note.curChangedSaveIt();
-	}, Note.intervalTime); // 600s, 10mins
+	}, Note.intervalTime);
 };
 // 停止, 当切换note时
 // 但过5000后自动启动

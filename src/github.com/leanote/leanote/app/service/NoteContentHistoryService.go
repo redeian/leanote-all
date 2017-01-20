@@ -13,7 +13,7 @@ type NoteContentHistoryService struct {
 }
 
 // 每个历史记录最大值
-var maxSize = 10
+var maxSize = 500
 
 // 新建一个note, 不需要添加历史记录
 // 添加历史
