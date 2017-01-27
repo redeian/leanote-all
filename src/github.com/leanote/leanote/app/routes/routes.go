@@ -54,6 +54,56 @@ func (_ tStatic) ServeModule(
 }
 
 
+type tAttach struct {}
+var Attach tAttach
+
+
+func (_ tAttach) UploadAttach(
+		noteId string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "noteId", noteId)
+	return revel.MainRouter.Reverse("Attach.UploadAttach", args).Url
+}
+
+func (_ tAttach) DeleteAttach(
+		attachId string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "attachId", attachId)
+	return revel.MainRouter.Reverse("Attach.DeleteAttach", args).Url
+}
+
+func (_ tAttach) GetAttachs(
+		noteId string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "noteId", noteId)
+	return revel.MainRouter.Reverse("Attach.GetAttachs", args).Url
+}
+
+func (_ tAttach) Download(
+		attachId string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "attachId", attachId)
+	return revel.MainRouter.Reverse("Attach.Download", args).Url
+}
+
+func (_ tAttach) DownloadAll(
+		noteId string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "noteId", noteId)
+	return revel.MainRouter.Reverse("Attach.DownloadAll", args).Url
+}
+
+
 type tBlog struct {}
 var Blog tBlog
 
@@ -300,6 +350,293 @@ func (_ tIndex) Suggestion(
 }
 
 
+type tTag struct {}
+var Tag tTag
+
+
+func (_ tTag) UpdateTag(
+		tag string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "tag", tag)
+	return revel.MainRouter.Reverse("Tag.UpdateTag", args).Url
+}
+
+func (_ tTag) DeleteTag(
+		tag string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "tag", tag)
+	return revel.MainRouter.Reverse("Tag.DeleteTag", args).Url
+}
+
+
+type tUser struct {}
+var User tUser
+
+
+func (_ tUser) Account(
+		tab int,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "tab", tab)
+	return revel.MainRouter.Reverse("User.Account", args).Url
+}
+
+func (_ tUser) UpdateUsername(
+		username string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "username", username)
+	return revel.MainRouter.Reverse("User.UpdateUsername", args).Url
+}
+
+func (_ tUser) UpdatePwd(
+		oldPwd string,
+		pwd string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "oldPwd", oldPwd)
+	revel.Unbind(args, "pwd", pwd)
+	return revel.MainRouter.Reverse("User.UpdatePwd", args).Url
+}
+
+func (_ tUser) UpdateTheme(
+		theme string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "theme", theme)
+	return revel.MainRouter.Reverse("User.UpdateTheme", args).Url
+}
+
+func (_ tUser) SendRegisterEmail(
+		content string,
+		toEmail string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "content", content)
+	revel.Unbind(args, "toEmail", toEmail)
+	return revel.MainRouter.Reverse("User.SendRegisterEmail", args).Url
+}
+
+func (_ tUser) ReSendActiveEmail(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("User.ReSendActiveEmail", args).Url
+}
+
+func (_ tUser) UpdateEmail(
+		token string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "token", token)
+	return revel.MainRouter.Reverse("User.UpdateEmail", args).Url
+}
+
+func (_ tUser) ActiveEmail(
+		token string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "token", token)
+	return revel.MainRouter.Reverse("User.ActiveEmail", args).Url
+}
+
+func (_ tUser) UpdateColumnWidth(
+		notebookWidth int,
+		noteListWidth int,
+		mdEditorWidth int,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "notebookWidth", notebookWidth)
+	revel.Unbind(args, "noteListWidth", noteListWidth)
+	revel.Unbind(args, "mdEditorWidth", mdEditorWidth)
+	return revel.MainRouter.Reverse("User.UpdateColumnWidth", args).Url
+}
+
+func (_ tUser) UpdateLeftIsMin(
+		leftIsMin bool,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "leftIsMin", leftIsMin)
+	return revel.MainRouter.Reverse("User.UpdateLeftIsMin", args).Url
+}
+
+
+type tAlbum struct {}
+var Album tAlbum
+
+
+func (_ tAlbum) Index(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Album.Index", args).Url
+}
+
+func (_ tAlbum) GetAlbums(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Album.GetAlbums", args).Url
+}
+
+func (_ tAlbum) DeleteAlbum(
+		albumId string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "albumId", albumId)
+	return revel.MainRouter.Reverse("Album.DeleteAlbum", args).Url
+}
+
+func (_ tAlbum) AddAlbum(
+		name string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "name", name)
+	return revel.MainRouter.Reverse("Album.AddAlbum", args).Url
+}
+
+func (_ tAlbum) UpdateAlbum(
+		albumId string,
+		name string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "albumId", albumId)
+	revel.Unbind(args, "name", name)
+	return revel.MainRouter.Reverse("Album.UpdateAlbum", args).Url
+}
+
+
+type tCaptcha struct {}
+var Captcha tCaptcha
+
+
+func (_ tCaptcha) Get(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Captcha.Get", args).Url
+}
+
+
+type tFile struct {}
+var File tFile
+
+
+func (_ tFile) UploadBlogLogo(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("File.UploadBlogLogo", args).Url
+}
+
+func (_ tFile) PasteImage(
+		noteId string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "noteId", noteId)
+	return revel.MainRouter.Reverse("File.PasteImage", args).Url
+}
+
+func (_ tFile) UploadAvatar(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("File.UploadAvatar", args).Url
+}
+
+func (_ tFile) UploadImageLeaui(
+		albumId string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "albumId", albumId)
+	return revel.MainRouter.Reverse("File.UploadImageLeaui", args).Url
+}
+
+func (_ tFile) GetImages(
+		albumId string,
+		key string,
+		page int,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "albumId", albumId)
+	revel.Unbind(args, "key", key)
+	revel.Unbind(args, "page", page)
+	return revel.MainRouter.Reverse("File.GetImages", args).Url
+}
+
+func (_ tFile) UpdateImageTitle(
+		fileId string,
+		title string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "fileId", fileId)
+	revel.Unbind(args, "title", title)
+	return revel.MainRouter.Reverse("File.UpdateImageTitle", args).Url
+}
+
+func (_ tFile) DeleteImage(
+		fileId string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "fileId", fileId)
+	return revel.MainRouter.Reverse("File.DeleteImage", args).Url
+}
+
+func (_ tFile) OutputImage(
+		noteId string,
+		fileId string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "noteId", noteId)
+	revel.Unbind(args, "fileId", fileId)
+	return revel.MainRouter.Reverse("File.OutputImage", args).Url
+}
+
+func (_ tFile) CopyImage(
+		userId string,
+		fileId string,
+		toUserId string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "userId", userId)
+	revel.Unbind(args, "fileId", fileId)
+	revel.Unbind(args, "toUserId", toUserId)
+	return revel.MainRouter.Reverse("File.CopyImage", args).Url
+}
+
+func (_ tFile) CopyHttpImage(
+		src string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "src", src)
+	return revel.MainRouter.Reverse("File.CopyHttpImage", args).Url
+}
+
+
 type tNotebook struct {}
 var Notebook tNotebook
 
@@ -389,123 +726,6 @@ func (_ tNoteContentHistory) ListHistories(
 	
 	revel.Unbind(args, "noteId", noteId)
 	return revel.MainRouter.Reverse("NoteContentHistory.ListHistories", args).Url
-}
-
-
-type tAuth struct {}
-var Auth tAuth
-
-
-func (_ tAuth) Login(
-		email string,
-		from string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "email", email)
-	revel.Unbind(args, "from", from)
-	return revel.MainRouter.Reverse("Auth.Login", args).Url
-}
-
-func (_ tAuth) DoLogin(
-		email string,
-		pwd string,
-		captcha string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "email", email)
-	revel.Unbind(args, "pwd", pwd)
-	revel.Unbind(args, "captcha", captcha)
-	return revel.MainRouter.Reverse("Auth.DoLogin", args).Url
-}
-
-func (_ tAuth) Logout(
-		) string {
-	args := make(map[string]string)
-	
-	return revel.MainRouter.Reverse("Auth.Logout", args).Url
-}
-
-func (_ tAuth) Demo(
-		) string {
-	args := make(map[string]string)
-	
-	return revel.MainRouter.Reverse("Auth.Demo", args).Url
-}
-
-func (_ tAuth) Register(
-		from string,
-		iu string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "from", from)
-	revel.Unbind(args, "iu", iu)
-	return revel.MainRouter.Reverse("Auth.Register", args).Url
-}
-
-func (_ tAuth) DoRegister(
-		email string,
-		pwd string,
-		iu string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "email", email)
-	revel.Unbind(args, "pwd", pwd)
-	revel.Unbind(args, "iu", iu)
-	return revel.MainRouter.Reverse("Auth.DoRegister", args).Url
-}
-
-func (_ tAuth) FindPassword(
-		) string {
-	args := make(map[string]string)
-	
-	return revel.MainRouter.Reverse("Auth.FindPassword", args).Url
-}
-
-func (_ tAuth) DoFindPassword(
-		email string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "email", email)
-	return revel.MainRouter.Reverse("Auth.DoFindPassword", args).Url
-}
-
-func (_ tAuth) FindPassword2(
-		token string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "token", token)
-	return revel.MainRouter.Reverse("Auth.FindPassword2", args).Url
-}
-
-func (_ tAuth) FindPasswordUpdate(
-		token string,
-		pwd string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "token", token)
-	revel.Unbind(args, "pwd", pwd)
-	return revel.MainRouter.Reverse("Auth.FindPasswordUpdate", args).Url
-}
-
-
-type tOauth struct {}
-var Oauth tOauth
-
-
-func (_ tOauth) GithubCallback(
-		code string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "code", code)
-	return revel.MainRouter.Reverse("Oauth.GithubCallback", args).Url
 }
 
 
@@ -733,189 +953,106 @@ func (_ tShare) UpdateShareNotebookGroupPerm(
 }
 
 
-type tTag struct {}
-var Tag tTag
+type tAuth struct {}
+var Auth tAuth
 
 
-func (_ tTag) UpdateTag(
-		tag string,
+func (_ tAuth) Login(
+		email string,
+		from string,
 		) string {
 	args := make(map[string]string)
 	
-	revel.Unbind(args, "tag", tag)
-	return revel.MainRouter.Reverse("Tag.UpdateTag", args).Url
+	revel.Unbind(args, "email", email)
+	revel.Unbind(args, "from", from)
+	return revel.MainRouter.Reverse("Auth.Login", args).Url
 }
 
-func (_ tTag) DeleteTag(
-		tag string,
+func (_ tAuth) DoLogin(
+		email string,
+		pwd string,
+		captcha string,
 		) string {
 	args := make(map[string]string)
 	
-	revel.Unbind(args, "tag", tag)
-	return revel.MainRouter.Reverse("Tag.DeleteTag", args).Url
+	revel.Unbind(args, "email", email)
+	revel.Unbind(args, "pwd", pwd)
+	revel.Unbind(args, "captcha", captcha)
+	return revel.MainRouter.Reverse("Auth.DoLogin", args).Url
 }
 
-
-type tAlbum struct {}
-var Album tAlbum
-
-
-func (_ tAlbum) Index(
+func (_ tAuth) Logout(
 		) string {
 	args := make(map[string]string)
 	
-	return revel.MainRouter.Reverse("Album.Index", args).Url
+	return revel.MainRouter.Reverse("Auth.Logout", args).Url
 }
 
-func (_ tAlbum) GetAlbums(
+func (_ tAuth) Demo(
 		) string {
 	args := make(map[string]string)
 	
-	return revel.MainRouter.Reverse("Album.GetAlbums", args).Url
+	return revel.MainRouter.Reverse("Auth.Demo", args).Url
 }
 
-func (_ tAlbum) DeleteAlbum(
-		albumId string,
+func (_ tAuth) Register(
+		from string,
+		iu string,
 		) string {
 	args := make(map[string]string)
 	
-	revel.Unbind(args, "albumId", albumId)
-	return revel.MainRouter.Reverse("Album.DeleteAlbum", args).Url
+	revel.Unbind(args, "from", from)
+	revel.Unbind(args, "iu", iu)
+	return revel.MainRouter.Reverse("Auth.Register", args).Url
 }
 
-func (_ tAlbum) AddAlbum(
-		name string,
+func (_ tAuth) DoRegister(
+		email string,
+		pwd string,
+		iu string,
 		) string {
 	args := make(map[string]string)
 	
-	revel.Unbind(args, "name", name)
-	return revel.MainRouter.Reverse("Album.AddAlbum", args).Url
+	revel.Unbind(args, "email", email)
+	revel.Unbind(args, "pwd", pwd)
+	revel.Unbind(args, "iu", iu)
+	return revel.MainRouter.Reverse("Auth.DoRegister", args).Url
 }
 
-func (_ tAlbum) UpdateAlbum(
-		albumId string,
-		name string,
+func (_ tAuth) FindPassword(
 		) string {
 	args := make(map[string]string)
 	
-	revel.Unbind(args, "albumId", albumId)
-	revel.Unbind(args, "name", name)
-	return revel.MainRouter.Reverse("Album.UpdateAlbum", args).Url
+	return revel.MainRouter.Reverse("Auth.FindPassword", args).Url
 }
 
-
-type tCaptcha struct {}
-var Captcha tCaptcha
-
-
-func (_ tCaptcha) Get(
+func (_ tAuth) DoFindPassword(
+		email string,
 		) string {
 	args := make(map[string]string)
 	
-	return revel.MainRouter.Reverse("Captcha.Get", args).Url
+	revel.Unbind(args, "email", email)
+	return revel.MainRouter.Reverse("Auth.DoFindPassword", args).Url
 }
 
-
-type tFile struct {}
-var File tFile
-
-
-func (_ tFile) UploadBlogLogo(
+func (_ tAuth) FindPassword2(
+		token string,
 		) string {
 	args := make(map[string]string)
 	
-	return revel.MainRouter.Reverse("File.UploadBlogLogo", args).Url
+	revel.Unbind(args, "token", token)
+	return revel.MainRouter.Reverse("Auth.FindPassword2", args).Url
 }
 
-func (_ tFile) PasteImage(
-		noteId string,
+func (_ tAuth) FindPasswordUpdate(
+		token string,
+		pwd string,
 		) string {
 	args := make(map[string]string)
 	
-	revel.Unbind(args, "noteId", noteId)
-	return revel.MainRouter.Reverse("File.PasteImage", args).Url
-}
-
-func (_ tFile) UploadAvatar(
-		) string {
-	args := make(map[string]string)
-	
-	return revel.MainRouter.Reverse("File.UploadAvatar", args).Url
-}
-
-func (_ tFile) UploadImageLeaui(
-		albumId string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "albumId", albumId)
-	return revel.MainRouter.Reverse("File.UploadImageLeaui", args).Url
-}
-
-func (_ tFile) GetImages(
-		albumId string,
-		key string,
-		page int,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "albumId", albumId)
-	revel.Unbind(args, "key", key)
-	revel.Unbind(args, "page", page)
-	return revel.MainRouter.Reverse("File.GetImages", args).Url
-}
-
-func (_ tFile) UpdateImageTitle(
-		fileId string,
-		title string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "fileId", fileId)
-	revel.Unbind(args, "title", title)
-	return revel.MainRouter.Reverse("File.UpdateImageTitle", args).Url
-}
-
-func (_ tFile) DeleteImage(
-		fileId string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "fileId", fileId)
-	return revel.MainRouter.Reverse("File.DeleteImage", args).Url
-}
-
-func (_ tFile) OutputImage(
-		noteId string,
-		fileId string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "noteId", noteId)
-	revel.Unbind(args, "fileId", fileId)
-	return revel.MainRouter.Reverse("File.OutputImage", args).Url
-}
-
-func (_ tFile) CopyImage(
-		userId string,
-		fileId string,
-		toUserId string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "userId", userId)
-	revel.Unbind(args, "fileId", fileId)
-	revel.Unbind(args, "toUserId", toUserId)
-	return revel.MainRouter.Reverse("File.CopyImage", args).Url
-}
-
-func (_ tFile) CopyHttpImage(
-		src string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "src", src)
-	return revel.MainRouter.Reverse("File.CopyHttpImage", args).Url
+	revel.Unbind(args, "token", token)
+	revel.Unbind(args, "pwd", pwd)
+	return revel.MainRouter.Reverse("Auth.FindPasswordUpdate", args).Url
 }
 
 
@@ -1084,157 +1221,6 @@ func (_ tNote) SetNote2Blog(
 }
 
 
-type tUser struct {}
-var User tUser
-
-
-func (_ tUser) Account(
-		tab int,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "tab", tab)
-	return revel.MainRouter.Reverse("User.Account", args).Url
-}
-
-func (_ tUser) UpdateUsername(
-		username string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "username", username)
-	return revel.MainRouter.Reverse("User.UpdateUsername", args).Url
-}
-
-func (_ tUser) UpdatePwd(
-		oldPwd string,
-		pwd string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "oldPwd", oldPwd)
-	revel.Unbind(args, "pwd", pwd)
-	return revel.MainRouter.Reverse("User.UpdatePwd", args).Url
-}
-
-func (_ tUser) UpdateTheme(
-		theme string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "theme", theme)
-	return revel.MainRouter.Reverse("User.UpdateTheme", args).Url
-}
-
-func (_ tUser) SendRegisterEmail(
-		content string,
-		toEmail string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "content", content)
-	revel.Unbind(args, "toEmail", toEmail)
-	return revel.MainRouter.Reverse("User.SendRegisterEmail", args).Url
-}
-
-func (_ tUser) ReSendActiveEmail(
-		) string {
-	args := make(map[string]string)
-	
-	return revel.MainRouter.Reverse("User.ReSendActiveEmail", args).Url
-}
-
-func (_ tUser) UpdateEmail(
-		token string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "token", token)
-	return revel.MainRouter.Reverse("User.UpdateEmail", args).Url
-}
-
-func (_ tUser) ActiveEmail(
-		token string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "token", token)
-	return revel.MainRouter.Reverse("User.ActiveEmail", args).Url
-}
-
-func (_ tUser) UpdateColumnWidth(
-		notebookWidth int,
-		noteListWidth int,
-		mdEditorWidth int,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "notebookWidth", notebookWidth)
-	revel.Unbind(args, "noteListWidth", noteListWidth)
-	revel.Unbind(args, "mdEditorWidth", mdEditorWidth)
-	return revel.MainRouter.Reverse("User.UpdateColumnWidth", args).Url
-}
-
-func (_ tUser) UpdateLeftIsMin(
-		leftIsMin bool,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "leftIsMin", leftIsMin)
-	return revel.MainRouter.Reverse("User.UpdateLeftIsMin", args).Url
-}
-
-
-type tAttach struct {}
-var Attach tAttach
-
-
-func (_ tAttach) UploadAttach(
-		noteId string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "noteId", noteId)
-	return revel.MainRouter.Reverse("Attach.UploadAttach", args).Url
-}
-
-func (_ tAttach) DeleteAttach(
-		attachId string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "attachId", attachId)
-	return revel.MainRouter.Reverse("Attach.DeleteAttach", args).Url
-}
-
-func (_ tAttach) GetAttachs(
-		noteId string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "noteId", noteId)
-	return revel.MainRouter.Reverse("Attach.GetAttachs", args).Url
-}
-
-func (_ tAttach) Download(
-		attachId string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "attachId", attachId)
-	return revel.MainRouter.Reverse("Attach.Download", args).Url
-}
-
-func (_ tAttach) DownloadAll(
-		noteId string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "noteId", noteId)
-	return revel.MainRouter.Reverse("Attach.DownloadAll", args).Url
-}
-
-
 type tAdminBaseController struct {}
 var AdminBaseController tAdminBaseController
 
@@ -1345,119 +1331,6 @@ func (_ tPreview) Search(
 }
 
 
-type tAdminData struct {}
-var AdminData tAdminData
-
-
-func (_ tAdminData) Index(
-		) string {
-	args := make(map[string]string)
-	
-	return revel.MainRouter.Reverse("AdminData.Index", args).Url
-}
-
-func (_ tAdminData) Backup(
-		) string {
-	args := make(map[string]string)
-	
-	return revel.MainRouter.Reverse("AdminData.Backup", args).Url
-}
-
-func (_ tAdminData) Restore(
-		createdTime string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "createdTime", createdTime)
-	return revel.MainRouter.Reverse("AdminData.Restore", args).Url
-}
-
-func (_ tAdminData) Delete(
-		createdTime string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "createdTime", createdTime)
-	return revel.MainRouter.Reverse("AdminData.Delete", args).Url
-}
-
-func (_ tAdminData) UpdateRemark(
-		createdTime string,
-		remark string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "createdTime", createdTime)
-	revel.Unbind(args, "remark", remark)
-	return revel.MainRouter.Reverse("AdminData.UpdateRemark", args).Url
-}
-
-func (_ tAdminData) Download(
-		createdTime string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "createdTime", createdTime)
-	return revel.MainRouter.Reverse("AdminData.Download", args).Url
-}
-
-
-type tAdminUser struct {}
-var AdminUser tAdminUser
-
-
-func (_ tAdminUser) Index(
-		sorter string,
-		keywords string,
-		pageSize int,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "sorter", sorter)
-	revel.Unbind(args, "keywords", keywords)
-	revel.Unbind(args, "pageSize", pageSize)
-	return revel.MainRouter.Reverse("AdminUser.Index", args).Url
-}
-
-func (_ tAdminUser) Add(
-		) string {
-	args := make(map[string]string)
-	
-	return revel.MainRouter.Reverse("AdminUser.Add", args).Url
-}
-
-func (_ tAdminUser) Register(
-		email string,
-		pwd string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "email", email)
-	revel.Unbind(args, "pwd", pwd)
-	return revel.MainRouter.Reverse("AdminUser.Register", args).Url
-}
-
-func (_ tAdminUser) ResetPwd(
-		userId string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "userId", userId)
-	return revel.MainRouter.Reverse("AdminUser.ResetPwd", args).Url
-}
-
-func (_ tAdminUser) DoResetPwd(
-		userId string,
-		pwd string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "userId", userId)
-	revel.Unbind(args, "pwd", pwd)
-	return revel.MainRouter.Reverse("AdminUser.DoResetPwd", args).Url
-}
-
-
 type tAdminBlog struct {}
 var AdminBlog tAdminBlog
 
@@ -1512,178 +1385,6 @@ func (_ tAdmin) GetView(
 	
 	revel.Unbind(args, "view", view)
 	return revel.MainRouter.Reverse("Admin.GetView", args).Url
-}
-
-
-type tAdminEmail struct {}
-var AdminEmail tAdminEmail
-
-
-func (_ tAdminEmail) Email(
-		) string {
-	args := make(map[string]string)
-	
-	return revel.MainRouter.Reverse("AdminEmail.Email", args).Url
-}
-
-func (_ tAdminEmail) Blog(
-		) string {
-	args := make(map[string]string)
-	
-	return revel.MainRouter.Reverse("AdminEmail.Blog", args).Url
-}
-
-func (_ tAdminEmail) DoBlogTag(
-		recommendTags string,
-		newTags string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "recommendTags", recommendTags)
-	revel.Unbind(args, "newTags", newTags)
-	return revel.MainRouter.Reverse("AdminEmail.DoBlogTag", args).Url
-}
-
-func (_ tAdminEmail) Demo(
-		) string {
-	args := make(map[string]string)
-	
-	return revel.MainRouter.Reverse("AdminEmail.Demo", args).Url
-}
-
-func (_ tAdminEmail) DoDemo(
-		demoUsername string,
-		demoPassword string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "demoUsername", demoUsername)
-	revel.Unbind(args, "demoPassword", demoPassword)
-	return revel.MainRouter.Reverse("AdminEmail.DoDemo", args).Url
-}
-
-func (_ tAdminEmail) ToImage(
-		) string {
-	args := make(map[string]string)
-	
-	return revel.MainRouter.Reverse("AdminEmail.ToImage", args).Url
-}
-
-func (_ tAdminEmail) DoToImage(
-		toImageBinPath string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "toImageBinPath", toImageBinPath)
-	return revel.MainRouter.Reverse("AdminEmail.DoToImage", args).Url
-}
-
-func (_ tAdminEmail) Set(
-		emailHost string,
-		emailPort string,
-		emailUsername string,
-		emailPassword string,
-		emailSSL string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "emailHost", emailHost)
-	revel.Unbind(args, "emailPort", emailPort)
-	revel.Unbind(args, "emailUsername", emailUsername)
-	revel.Unbind(args, "emailPassword", emailPassword)
-	revel.Unbind(args, "emailSSL", emailSSL)
-	return revel.MainRouter.Reverse("AdminEmail.Set", args).Url
-}
-
-func (_ tAdminEmail) Template(
-		) string {
-	args := make(map[string]string)
-	
-	return revel.MainRouter.Reverse("AdminEmail.Template", args).Url
-}
-
-func (_ tAdminEmail) SendEmailToEmails(
-		sendEmails string,
-		latestEmailSubject string,
-		latestEmailBody string,
-		verified bool,
-		saveAsOldEmail bool,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "sendEmails", sendEmails)
-	revel.Unbind(args, "latestEmailSubject", latestEmailSubject)
-	revel.Unbind(args, "latestEmailBody", latestEmailBody)
-	revel.Unbind(args, "verified", verified)
-	revel.Unbind(args, "saveAsOldEmail", saveAsOldEmail)
-	return revel.MainRouter.Reverse("AdminEmail.SendEmailToEmails", args).Url
-}
-
-func (_ tAdminEmail) SendToUsers2(
-		emails string,
-		latestEmailSubject string,
-		latestEmailBody string,
-		verified bool,
-		saveAsOldEmail bool,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "emails", emails)
-	revel.Unbind(args, "latestEmailSubject", latestEmailSubject)
-	revel.Unbind(args, "latestEmailBody", latestEmailBody)
-	revel.Unbind(args, "verified", verified)
-	revel.Unbind(args, "saveAsOldEmail", saveAsOldEmail)
-	return revel.MainRouter.Reverse("AdminEmail.SendToUsers2", args).Url
-}
-
-func (_ tAdminEmail) SendEmailDialog(
-		emails string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "emails", emails)
-	return revel.MainRouter.Reverse("AdminEmail.SendEmailDialog", args).Url
-}
-
-func (_ tAdminEmail) SendToUsers(
-		userFilterEmail string,
-		userFilterWhiteList string,
-		userFilterBlackList string,
-		latestEmailSubject string,
-		latestEmailBody string,
-		verified bool,
-		saveAsOldEmail bool,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "userFilterEmail", userFilterEmail)
-	revel.Unbind(args, "userFilterWhiteList", userFilterWhiteList)
-	revel.Unbind(args, "userFilterBlackList", userFilterBlackList)
-	revel.Unbind(args, "latestEmailSubject", latestEmailSubject)
-	revel.Unbind(args, "latestEmailBody", latestEmailBody)
-	revel.Unbind(args, "verified", verified)
-	revel.Unbind(args, "saveAsOldEmail", saveAsOldEmail)
-	return revel.MainRouter.Reverse("AdminEmail.SendToUsers", args).Url
-}
-
-func (_ tAdminEmail) DeleteEmails(
-		ids string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "ids", ids)
-	return revel.MainRouter.Reverse("AdminEmail.DeleteEmails", args).Url
-}
-
-func (_ tAdminEmail) List(
-		sorter string,
-		keywords string,
-		) string {
-	args := make(map[string]string)
-	
-	revel.Unbind(args, "sorter", sorter)
-	revel.Unbind(args, "keywords", keywords)
-	return revel.MainRouter.Reverse("AdminEmail.List", args).Url
 }
 
 
@@ -1865,6 +1566,291 @@ func (_ tAdminUpgrade) UpgradeBeta3ToBeta4(
 	args := make(map[string]string)
 	
 	return revel.MainRouter.Reverse("AdminUpgrade.UpgradeBeta3ToBeta4", args).Url
+}
+
+
+type tAdminData struct {}
+var AdminData tAdminData
+
+
+func (_ tAdminData) Index(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("AdminData.Index", args).Url
+}
+
+func (_ tAdminData) Backup(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("AdminData.Backup", args).Url
+}
+
+func (_ tAdminData) Restore(
+		createdTime string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "createdTime", createdTime)
+	return revel.MainRouter.Reverse("AdminData.Restore", args).Url
+}
+
+func (_ tAdminData) Delete(
+		createdTime string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "createdTime", createdTime)
+	return revel.MainRouter.Reverse("AdminData.Delete", args).Url
+}
+
+func (_ tAdminData) UpdateRemark(
+		createdTime string,
+		remark string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "createdTime", createdTime)
+	revel.Unbind(args, "remark", remark)
+	return revel.MainRouter.Reverse("AdminData.UpdateRemark", args).Url
+}
+
+func (_ tAdminData) Download(
+		createdTime string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "createdTime", createdTime)
+	return revel.MainRouter.Reverse("AdminData.Download", args).Url
+}
+
+
+type tAdminEmail struct {}
+var AdminEmail tAdminEmail
+
+
+func (_ tAdminEmail) Email(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("AdminEmail.Email", args).Url
+}
+
+func (_ tAdminEmail) Blog(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("AdminEmail.Blog", args).Url
+}
+
+func (_ tAdminEmail) DoBlogTag(
+		recommendTags string,
+		newTags string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "recommendTags", recommendTags)
+	revel.Unbind(args, "newTags", newTags)
+	return revel.MainRouter.Reverse("AdminEmail.DoBlogTag", args).Url
+}
+
+func (_ tAdminEmail) Demo(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("AdminEmail.Demo", args).Url
+}
+
+func (_ tAdminEmail) DoDemo(
+		demoUsername string,
+		demoPassword string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "demoUsername", demoUsername)
+	revel.Unbind(args, "demoPassword", demoPassword)
+	return revel.MainRouter.Reverse("AdminEmail.DoDemo", args).Url
+}
+
+func (_ tAdminEmail) ToImage(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("AdminEmail.ToImage", args).Url
+}
+
+func (_ tAdminEmail) DoToImage(
+		toImageBinPath string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "toImageBinPath", toImageBinPath)
+	return revel.MainRouter.Reverse("AdminEmail.DoToImage", args).Url
+}
+
+func (_ tAdminEmail) Set(
+		emailHost string,
+		emailPort string,
+		emailUsername string,
+		emailPassword string,
+		emailSSL string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "emailHost", emailHost)
+	revel.Unbind(args, "emailPort", emailPort)
+	revel.Unbind(args, "emailUsername", emailUsername)
+	revel.Unbind(args, "emailPassword", emailPassword)
+	revel.Unbind(args, "emailSSL", emailSSL)
+	return revel.MainRouter.Reverse("AdminEmail.Set", args).Url
+}
+
+func (_ tAdminEmail) Template(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("AdminEmail.Template", args).Url
+}
+
+func (_ tAdminEmail) SendEmailToEmails(
+		sendEmails string,
+		latestEmailSubject string,
+		latestEmailBody string,
+		verified bool,
+		saveAsOldEmail bool,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "sendEmails", sendEmails)
+	revel.Unbind(args, "latestEmailSubject", latestEmailSubject)
+	revel.Unbind(args, "latestEmailBody", latestEmailBody)
+	revel.Unbind(args, "verified", verified)
+	revel.Unbind(args, "saveAsOldEmail", saveAsOldEmail)
+	return revel.MainRouter.Reverse("AdminEmail.SendEmailToEmails", args).Url
+}
+
+func (_ tAdminEmail) SendToUsers2(
+		emails string,
+		latestEmailSubject string,
+		latestEmailBody string,
+		verified bool,
+		saveAsOldEmail bool,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "emails", emails)
+	revel.Unbind(args, "latestEmailSubject", latestEmailSubject)
+	revel.Unbind(args, "latestEmailBody", latestEmailBody)
+	revel.Unbind(args, "verified", verified)
+	revel.Unbind(args, "saveAsOldEmail", saveAsOldEmail)
+	return revel.MainRouter.Reverse("AdminEmail.SendToUsers2", args).Url
+}
+
+func (_ tAdminEmail) SendEmailDialog(
+		emails string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "emails", emails)
+	return revel.MainRouter.Reverse("AdminEmail.SendEmailDialog", args).Url
+}
+
+func (_ tAdminEmail) SendToUsers(
+		userFilterEmail string,
+		userFilterWhiteList string,
+		userFilterBlackList string,
+		latestEmailSubject string,
+		latestEmailBody string,
+		verified bool,
+		saveAsOldEmail bool,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "userFilterEmail", userFilterEmail)
+	revel.Unbind(args, "userFilterWhiteList", userFilterWhiteList)
+	revel.Unbind(args, "userFilterBlackList", userFilterBlackList)
+	revel.Unbind(args, "latestEmailSubject", latestEmailSubject)
+	revel.Unbind(args, "latestEmailBody", latestEmailBody)
+	revel.Unbind(args, "verified", verified)
+	revel.Unbind(args, "saveAsOldEmail", saveAsOldEmail)
+	return revel.MainRouter.Reverse("AdminEmail.SendToUsers", args).Url
+}
+
+func (_ tAdminEmail) DeleteEmails(
+		ids string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "ids", ids)
+	return revel.MainRouter.Reverse("AdminEmail.DeleteEmails", args).Url
+}
+
+func (_ tAdminEmail) List(
+		sorter string,
+		keywords string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "sorter", sorter)
+	revel.Unbind(args, "keywords", keywords)
+	return revel.MainRouter.Reverse("AdminEmail.List", args).Url
+}
+
+
+type tAdminUser struct {}
+var AdminUser tAdminUser
+
+
+func (_ tAdminUser) Index(
+		sorter string,
+		keywords string,
+		pageSize int,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "sorter", sorter)
+	revel.Unbind(args, "keywords", keywords)
+	revel.Unbind(args, "pageSize", pageSize)
+	return revel.MainRouter.Reverse("AdminUser.Index", args).Url
+}
+
+func (_ tAdminUser) Add(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("AdminUser.Add", args).Url
+}
+
+func (_ tAdminUser) Register(
+		email string,
+		pwd string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "email", email)
+	revel.Unbind(args, "pwd", pwd)
+	return revel.MainRouter.Reverse("AdminUser.Register", args).Url
+}
+
+func (_ tAdminUser) ResetPwd(
+		userId string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "userId", userId)
+	return revel.MainRouter.Reverse("AdminUser.ResetPwd", args).Url
+}
+
+func (_ tAdminUser) DoResetPwd(
+		userId string,
+		pwd string,
+		) string {
+	args := make(map[string]string)
+	
+	revel.Unbind(args, "userId", userId)
+	revel.Unbind(args, "pwd", pwd)
+	return revel.MainRouter.Reverse("AdminUser.DoResetPwd", args).Url
 }
 
 
