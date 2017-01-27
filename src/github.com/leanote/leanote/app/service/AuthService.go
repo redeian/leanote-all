@@ -7,9 +7,10 @@ import (
 	//	"github.com/revel/revel"
 	"errors"
 	"fmt"
-	. "github.com/leanote/leanote/app/lea"
 	"strconv"
 	"strings"
+
+	. "github.com/leanote/leanote/app/lea"
 )
 
 // 登录与权限 Login & Register
@@ -63,7 +64,7 @@ func (this *AuthService) register(user info.User) (bool, string) {
 		notebook := info.Notebook{
 			Seq:    -1,
 			UserId: user.UserId}
-		title2Id := map[string]bson.ObjectId{"life": bson.NewObjectId(), "study": bson.NewObjectId(), "work": bson.NewObjectId()}
+		title2Id := map[string]bson.ObjectId{"welcome": bson.NewObjectId(), "study": bson.NewObjectId(), "work": bson.NewObjectId()}
 		for title, objectId := range title2Id {
 			notebook.Title = title
 			notebook.NotebookId = objectId
@@ -92,10 +93,10 @@ func (this *AuthService) register(user info.User) (bool, string) {
 
 			// 复制笔记
 			for _, noteId := range registerCopyNoteIds {
-				note := noteService.CopySharedNote(noteId, title2Id["life"].Hex(), registerSharedUserId, user.UserId.Hex())
-				//				Log(noteId)
-				//				Log("Copy")
-				//				LogJ(note)
+				note := noteService.CopySharedNote(noteId, title2Id["welcome"].Hex(), registerSharedUserId, user.UserId.Hex())
+				// Log(noteId)
+				// Log("Copy")
+				// LogJ(note)
 				noteUpdate := bson.M{"IsBlog": false} // 不要是博客
 				noteService.UpdateNote(user.UserId.Hex(), note.NoteId.Hex(), noteUpdate, -1)
 			}
@@ -105,7 +106,7 @@ func (this *AuthService) register(user info.User) (bool, string) {
 		// 添加一条userBlog
 		blogService.UpdateUserBlog(info.UserBlog{UserId: user.UserId,
 			Title:      user.Username + " 's Blog",
-			SubTitle:   "Love Leanote!",
+			SubTitle:   "Love MAI Writer",
 			AboutMe:    "Hello, I am (^_^)",
 			CanComment: true,
 		})

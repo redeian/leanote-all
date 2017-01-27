@@ -22,10 +22,10 @@
     "Author": "leanote.com",
     "AuthorUrl": "http://leanote.com",
     "FriendLinks": [
-        {"Title": "My Note", "Url": "http://leanote.com/note"},
-        {"Title": "Leanote Home", "Url": "http://leanote.com"},
-        {"Title": "Leanote Comunity", "Url": "https://groups.google.com/forum/?fromgroups#!forum/leanote"},
-        {"Title": "lea++", "Url": "http://lea.leanote.com"},
-        {"Title": "Leanote Github", "Url": "https://github.com/leanote/leanote"}
+        // {"Title": "My Note", "Url": "http://leanote.com/note"},
+        // {"Title": "Leanote Home", "Url": "http://leanote.com"},
+        // {"Title": "Leanote Comunity", "Url": "https://groups.google.com/forum/?fromgroups#!forum/leanote"},
+        // {"Title": "lea++", "Url": "http://lea.leanote.com"},
+        // {"Title": "Leanote Github", "Url": "https://github.com/leanote/leanote"}
     ]
 }

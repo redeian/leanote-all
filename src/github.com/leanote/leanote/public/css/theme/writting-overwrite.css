@@ -1,14 +1,14 @@
 ::selection {
-  background: #000000;
-  color: #ffffff;
+  background: #000;
+  color: #fff;
 }
 ::-moz-selection {
-  background: #000000;
-  color: #ffffff;
+  background: #000;
+  color: #fff;
 }
 ::-webkit-selection {
-  background: #000000;
-  color: #ffffff;
+  background: #000;
+  color: #fff;
 }
 /*scroll*/
 /*
@@ -483,7 +483,7 @@ background-position:-1px -670px
   line-height: 30px;
 }
 .dropdown-menu li > a {
-  color: #000000;
+  color: #000;
   display: block;
   padding-right: 20px;
 }
@@ -622,17 +622,17 @@ a.raw:hover {
   margin-top: 10px;
 }
 .new-note {
-  background-color: #000000;
+  background-color: #000;
   border-radius: 3px;
   padding: 3px 5px;
   border: 1px solid #080303;
 }
 .new-note,
 .new-note a {
-  color: #ffffff;
+  color: #fff;
 }
 .new-note:hover {
-  background: #3d3b3b;
+  background: #3D3B3B;
   border-color: transparent;
 }
 .new-note:hover,
@@ -684,18 +684,18 @@ a.raw:hover {
   left: 30px !important;
 }
 a {
-  color: #000000;
+  color: #000;
   cursor: pointer;
 }
 a:hover {
   text-decoration: none !important;
-  color: #000000;
+  color: #000;
 }
 #header {
   height: 60px;
-  background-color: #fbfcf7;
-  border-bottom: 1px solid #fbfcf7;
-  color: #ffffff;
+  background-color: #fcfcfc;
+  border-bottom: 1px solid #fcfcfc;
+  color: #fff;
   /* for app */
   webkit-user-select: none;
   /* 还不知 */
@@ -703,11 +703,11 @@ a:hover {
   /* -webkit-app-region: no-drag; */
 }
 #header a {
-  color: #cccccc;
+  color: #ccc;
 }
 #header li,
 #header li a {
-  color: #000000;
+  color: #000;
 }
 #logo {
   line-height: 50px;
@@ -730,7 +730,7 @@ a:hover {
   cursor: pointer;
 }
 #switcher i:hover {
-  color: #0fb264;
+  color: #659dbd;
 }
 #switcher #leftSwitcher2 {
   cursor: pointer;
@@ -742,7 +742,7 @@ a:hover {
   display: inline-block;
 }
 #switcher #leftSwitcher2:hover {
-  color: #0fb264;
+  color: #659dbd;
 }
 #switcher #leftSwitcher2 {
   display: none;
@@ -754,10 +754,10 @@ a:hover {
 }
 #searchNote input {
   background-size: 18px 13px;
-  border-color: #ebeff2;
+  border-color: #EBEFF2;
   border: none;
-  color: #cccccc;
-  background-color: #000000;
+  color: #ccc;
+  background-color: #000;
   padding-left: 14px;
   border-radius: 5px;
   height: 30px;
@@ -767,7 +767,7 @@ a:hover {
 }
 #searchNote input:focus {
   outline: none !important;
-  border-color: #0fb264;
+  border-color: #659dbd;
   box-shadow: none;
 }
 #header ul {
@@ -790,15 +790,15 @@ a:hover {
   color: #999999;
 }
 .dropdown-menu li > a {
-  color: #000000;
+  color: #000;
 }
 .dropdown-menu li:hover,
 .dropdown-menu li:focus {
-  background-color: #ebeff2;
+  background-color: #EBEFF2;
 }
 .dropdown-menu li > a:hover,
 .dropdown-menu li > a:focus {
-  background-color: #ebeff2;
+  background-color: #EBEFF2;
 }
 #loading {
   display: inline-block;
@@ -926,7 +926,7 @@ a:hover {
   opacity: 0.8;
 }
 .leanoteNav.unfolder h1 {
-  border-bottom: 1px dashed #ebeff2;
+  border-bottom: 1px dashed #EBEFF2;
 }
 .leanoteNav.unfolder span {
   display: inline;
@@ -943,7 +943,7 @@ a:hover {
   list-style-type: disc;
 }
 .leanoteNav ul li a:hover {
-  color: #0fb264;
+  color: #659dbd;
 }
 .leanoteNav ul .nav-h2 {
   margin-left: 20px;
@@ -1024,7 +1024,7 @@ a:hover {
 .mce-menu-item:hover,
 .mce-menu-item.mce-selected,
 .mce-menu-item:focus {
-  background-color: #ebeff2;
+  background-color: #EBEFF2;
 }
 .mce-menu-item:hover span,
 .mce-menu-item.mce-selected span,
@@ -1032,7 +1032,7 @@ a:hover {
   color: #000 !important;
 }
 .mce-menu-item-normal.mce-active {
-  background-color: #ebeff2;
+  background-color: #EBEFF2;
 }
 .tool-split {
   display: inline-block;
@@ -1439,7 +1439,7 @@ textarea#wmd-input {
   padding-top: 5px;
 }
 #wmd-input.ace_editor {
-  color: #000000;
+  color: #000;
 }
 #wmd-input.ace-tm {
   background-color: #ffffff;
@@ -1457,7 +1457,7 @@ textarea#wmd-input {
   background: none;
 }
 #wmd-input.ace-tm .ace_markup.ace_heading {
-  color: #000000;
+  color: #000;
   font-weight: bold;
 }
 #wmd-input.ace-tm .ace_markup.ace_heading.ace_1,
@@ -1468,7 +1468,7 @@ textarea#wmd-input {
   color: #1d3e81;
 }
 #wmd-input.ace-tm .ace_markup.ace_list {
-  color: #000000;
+  color: #000;
 }
 #wmd-input.ace-tm .ace_constant.ace_language {
   color: #1d3e81;
@@ -1501,15 +1501,15 @@ textarea#wmd-input {
   background: inherit;
 }
 #wmd-input.ace-tm .ace_strong {
-  color: #000000;
+  color: #000;
   font-weight: bold;
 }
 #wmd-input.ace-tm .ace_emphasis {
-  color: #000000;
+  color: #000;
   font-style: italic;
 }
 #wmd-input.ace-tm .ace_blockquote {
-  color: #000000;
+  color: #000;
 }
 #wmd-input.ace-tm .ace_code {
   color: #1a2026;
@@ -1518,7 +1518,7 @@ textarea#wmd-input {
   color: #1a2026;
 }
 #wmd-input.ace-tm .ace_link {
-  color: #000000;
+  color: #000;
   background-color: transparent;
   text-decoration: underline;
 }
@@ -1567,7 +1567,7 @@ textarea#wmd-input {
 }
 #addNotebookPlus {
   padding-right: 10px;
-  color: #adbece;
+  color: #ADBECE;
 }
 #addNotebookPlus .fa {
   font-size: 16px;
@@ -1579,7 +1579,7 @@ textarea#wmd-input {
   padding-left: 3px;
   box-shadow: none;
   background: none;
-  color: #ffffff;
+  color: #fff;
 }
 #notebookList input:focus,
 #notebookListForSearch input:focus {
@@ -1599,10 +1599,10 @@ textarea#wmd-input {
 }
 #notebookMin div.minContainer i {
   font-size: 20px;
-  color: #ffffff;
+  color: #fff;
 }
 #notebookMin div.minContainer:hover i {
-  color: #0fb264;
+  color: #659dbd;
 }
 #notebookMin div.minContainer ul {
   background-color: #fff;
@@ -1612,7 +1612,7 @@ textarea#wmd-input {
   margin: 0;
   margin-left: 20px;
   padding: 5px 0px;
-  border: 1px solid #0fb264;
+  border: 1px solid #659dbd;
   position: absolute;
   z-index: 1000;
   top: 0;
@@ -1655,7 +1655,7 @@ textarea#wmd-input {
 .folderHeader span {
   display: inline-block;
   line-height: 35px;
-  color: #ffffff;
+  color: #fff;
   font-size: 16px;
 }
 .folderHeader .fa-left,
@@ -1666,7 +1666,7 @@ textarea#wmd-input {
   width: 35px;
   border-right: 1px solid rgba(255, 255, 255, 0.05);
   text-align: center;
-  color: #ffffff;
+  color: #fff;
 }
 .friend-header {
   position: relative;
@@ -1696,7 +1696,7 @@ textarea#wmd-input {
 }
 .each-user div span {
   line-height: 35px;
-  color: #ffffff;
+  color: #fff;
   padding-left: 3px;
   font-size: 14px;
   display: block;
@@ -1801,9 +1801,9 @@ textarea#wmd-input {
   right: 3px;
   top: 7px;
   font-weight: normal;
-  background-color: #fbfcf7;
-  color: #000000;
-  border: 1px solid #ebeff2;
+  background-color: #fcfcfc;
+  color: #000;
+  border: 1px solid #EBEFF2;
 }
 /**
  * 笔记列表
@@ -1833,11 +1833,11 @@ textarea#wmd-input {
   padding-left: 5px;
   overflow-y: hidden;
   overflow-x: auto;
-  background-color: #fbfcf7;
+  background-color: #fcfcfc;
 }
 #notesAndSort {
-  background-color: #eeeeee;
-  border-bottom: 1px solid #ebeff2;
+  background-color: #eee;
+  border-bottom: 1px solid #EBEFF2;
   height: 36px;
 }
 #sortType {
@@ -1879,7 +1879,7 @@ textarea#wmd-input {
   height: 110px;
   overflow: hidden;
   cursor: pointer;
-  border: 1px solid #ebeff2;
+  border: 1px solid #EBEFF2;
   border-radius: 3px;
   margin-top: 5px;
   background-color: #fff;
@@ -1924,8 +1924,8 @@ textarea#wmd-input {
   line-height: 20px;
   overflow: hidden;
   margin-bottom: 0px;
-  color: #000000;
-  border-bottom: dashed 1px #ebeff2;
+  color: #000;
+  border-bottom: dashed 1px #EBEFF2;
 }
 #noteItemList .item-desc {
   position: absolute;
@@ -2276,7 +2276,7 @@ textarea#wmd-input {
   padding: 0px 3px;
   width: 100%;
   border: none;
-  background-color: #fbfcf7;
+  background-color: #fcfcfc;
 }
 #noteTitle:focus {
   outline: none !important;
@@ -2306,7 +2306,7 @@ textarea#wmd-input {
 #notebookNavForNewNote li,
 #notebookNavForNewSharedNote > li {
   padding-left: 0;
-  border-bottom: 1px solid #ebeff2;
+  border-bottom: 1px solid #EBEFF2;
 }
 #notebookNavForNewNote > li:hover,
 #notebookNavForNewNote > li:focus,
@@ -2319,13 +2319,13 @@ textarea#wmd-input {
   width: 95px;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 1px dashed #ebeff2;
+  border-right: 1px dashed #EBEFF2;
 }
 .new-note-left:hover {
-  background-color: #ebeff2;
+  background-color: #EBEFF2;
 }
 .new-note-right:hover {
-  background-color: #ebeff2;
+  background-color: #EBEFF2;
 }
 #historyList table {
   width: 100%;
@@ -2356,11 +2356,11 @@ textarea#wmd-input {
 #editorMask a {
   display: inline-block;
   border-radius: 3px;
-  border: 1px solid #ebeff2;
+  border: 1px solid #EBEFF2;
   padding: 10px;
 }
 #editorMask a:hover {
-  background-color: #65bd77;
+  background-color: #659dbd;
   color: #fff;
 }
 .note-mask {
@@ -2483,7 +2483,7 @@ textarea#wmd-input {
   display: none;
   padding: 0;
   border: none;
-  background-color: #fbfcf7;
+  background-color: #fcfcfc;
 }
 #addTagInput:focus {
   outline: none;
@@ -2680,20 +2680,20 @@ h3 {
 }
 /*"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue", Helvetica, "Microsoft Yahei", Verdana, Simsun, "Segoe UI", "Segoe UI Web Regular", "Segoe UI Symbol",  "BBAlpha Sans", "S60 Sans", Arial, sans-serif;*/
 ::selection {
-  background: #000000;
-  color: #ffffff;
+  background: #000;
+  color: #fff;
 }
 ::-moz-selection {
-  background: #000000;
-  color: #ffffff;
+  background: #000;
+  color: #fff;
 }
 ::-webkit-selection {
-  background: #000000;
-  color: #ffffff;
+  background: #000;
+  color: #fff;
 }
 html,
 body {
-  background-color: #fbfcf7;
+  background-color: #fcfcfc;
 }
 body {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
@@ -2701,12 +2701,12 @@ body {
   font-size: 16px;
 }
 a {
-  color: #000000;
+  color: #000;
   cursor: pointer;
 }
 a:hover {
   text-decoration: none !important;
-  color: #000000;
+  color: #000;
 }
 a.raw {
   color: #428bca;
@@ -2717,9 +2717,9 @@ a.raw:hover {
 /* header */
 #header {
   height: 60px;
-  background-color: #fbfcf7;
-  color: #ffffff;
-  border-bottom: 1px solid #ebeff2;
+  background-color: #fcfcfc;
+  color: #fff;
+  border-bottom: 1px solid #EBEFF2;
   /* for app */
   webkit-user-select: none;
   /* 还不知 */
@@ -2730,10 +2730,10 @@ a.raw:hover {
   color: #ccc;
 }
 #header li {
-  color: #000000;
+  color: #000;
 }
 #header li a {
-  color: #000000;
+  color: #000;
 }
 #searchWrap,
 #logo,
@@ -2768,7 +2768,7 @@ a.raw:hover {
   margin: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border: 1px solid #0fb264;
+  border: 1px solid #659dbd;
   overflow: visible;
 }
 .dropdown-menu li {
@@ -2778,17 +2778,17 @@ a.raw:hover {
   line-height: 30px;
 }
 .dropdown-menu > li > a {
-  color: #000000;
+  color: #000;
   display: inline-block;
   padding: 3px 3px;
 }
 .dropdown-menu > li:hover,
 .dropdown-menu > li:focus {
-  background-color: #ebeff2;
+  background-color: #EBEFF2;
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
-  background-color: #ebeff2;
+  background-color: #EBEFF2;
 }
 .ios7-a {
   display: inline-block;
@@ -2864,7 +2864,7 @@ a.raw:hover {
 }
 #notesAndSort {
   background-color: #eee;
-  border-bottom: 1px solid #ebeff2;
+  border-bottom: 1px solid #EBEFF2;
 }
 /* item list */
 #noteItemList {
@@ -2884,7 +2884,7 @@ a.raw:hover {
   overflow: hidden;
   cursor: pointer;
   padding: 5px;
-  border: 1px solid #ebeff2;
+  border: 1px solid #EBEFF2;
   border-radius: 3px;
   margin-top: 5px;
   background-color: #fff;
@@ -2892,7 +2892,7 @@ a.raw:hover {
 #noteItemList .item:hover,
 #noteItemList .contextmenu-hover {
   background-color: #ddd !important;
-  color: #000000;
+  color: #000;
 }
 #noteItemList .item-thumb {
   padding-left: 10px;
@@ -2942,8 +2942,8 @@ a.raw:hover {
   line-height: 20px;
   overflow: hidden;
   margin-bottom: 0px;
-  color: #000000;
-  border-bottom: dashed 1px #ebeff2;
+  color: #000;
+  border-bottom: dashed 1px #EBEFF2;
 }
 /* note */
 /* editor */
@@ -3011,7 +3011,7 @@ a.raw:hover {
   height: 30px;
   overflow: hidden;
   border-bottom: none;
-  background-color: #fbfcf7;
+  background-color: #fcfcfc;
 }
 #wmd-button-bar {
   overflow: visible;
@@ -3023,7 +3023,7 @@ a.raw:hover {
   line-height: 20px !important;
 }
 .mce-btn {
-  background-color: #fbfcf7 !important;
+  background-color: #fcfcfc !important;
 }
 .mce-menubtn.mce-btn-small span {
   line-height: 20px !important;
@@ -3042,7 +3042,7 @@ a.raw:hover {
 .mce-menu-item:hover,
 .mce-menu-item.mce-selected,
 .mce-menu-item:focus {
-  background-color: #ebeff2;
+  background-color: #EBEFF2;
 }
 .mce-menu-item:hover span,
 .mce-menu-item.mce-selected span,
@@ -3050,7 +3050,7 @@ a.raw:hover {
   color: #000 !important;
 }
 .mce-menu-item-normal.mce-active {
-  background-color: #ebeff2;
+  background-color: #EBEFF2;
 }
 .tool-split {
   display: inline-block;
@@ -3075,7 +3075,7 @@ a.raw:hover {
   display: none;
   padding: 0;
   border: none;
-  background-color: #fbfcf7;
+  background-color: #fcfcfc;
 }
 #addTagInput:focus {
   outline: none;
@@ -3144,7 +3144,7 @@ a.raw:hover {
   opacity: 0.8;
 }
 .leanoteNav.unfolder h1 {
-  border-bottom: 1px dashed #ebeff2;
+  border-bottom: 1px dashed #EBEFF2;
 }
 .leanoteNav.unfolder span {
   display: inline;
@@ -3161,7 +3161,7 @@ a.raw:hover {
   list-style-type: disc;
 }
 .leanoteNav ul li a:hover {
-  color: #0fb264;
+  color: #659dbd;
 }
 .leanoteNav ul .nav-h2 {
   margin-left: 20px;
@@ -3203,7 +3203,7 @@ a.raw:hover {
   height: 60px;
   left: 0;
   right: 0;
-  border-bottom: 1px solid #ebeff2;
+  border-bottom: 1px solid #EBEFF2;
 }
 #noteReadTitle {
   margin: 3px 0;
@@ -3340,7 +3340,7 @@ background-position:-1px -670px
 #notebookNavForNewNote li,
 #notebookNavForNewSharedNote > li {
   padding-left: 0;
-  border-bottom: 1px solid #ebeff2;
+  border-bottom: 1px solid #EBEFF2;
 }
 #notebookNavForNewNote > li:hover,
 #notebookNavForNewNote > li:focus,
@@ -3361,16 +3361,16 @@ background-position:-1px -670px
   width: 95px;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 1px dashed #ebeff2;
+  border-right: 1px dashed #EBEFF2;
 }
 .new-note-left:hover {
-  background-color: #ebeff2;
+  background-color: #EBEFF2;
 }
 .new-note-right {
   padding: 0 5px;
 }
 .new-note-right:hover {
-  background-color: #ebeff2;
+  background-color: #EBEFF2;
 }
 #historyList table {
   width: 100%;
@@ -3400,16 +3400,16 @@ background-position:-1px -670px
 #editorMask a {
   display: inline-block;
   border-radius: 3px;
-  border: 1px solid #ebeff2;
+  border: 1px solid #EBEFF2;
   padding: 10px;
 }
 #editorMask a:hover {
-  background-color: #65bd77;
+  background-color: #659dbd;
   color: #fff;
 }
 html,
 body {
-  background-color: #fbfcf7;
+  background-color: #fcfcfc;
   overflow: hidden;
 }
 #right-column,
@@ -3428,7 +3428,7 @@ body {
   right: 0;
   bottom: 0;
   top: 0;
-  background-color: #fbfcf7;
+  background-color: #fcfcfc;
   text-align: center;
   padding-top: 100px;
   z-index: 1000;
@@ -3477,7 +3477,7 @@ body {
 }
 .dropdown-menu {
   border: 1px solid #ccc;
-  background-color: #fbfcf7;
+  background-color: #fcfcfc;
 }
 #note {
   position: absolute;
@@ -3496,7 +3496,7 @@ body {
 }
 #wmd-input {
   border: none;
-  background-color: #fbfcf7 !important;
+  background-color: #fcfcfc !important;
   font-size: 16px !important;
   margin-top: 10px;
 }
@@ -3513,7 +3513,7 @@ body {
 }
 .editorBg {
   height: 3px;
-  background: url(/images/editor/editor-shadow.png) no-repeat center bottom #f9faf4;
+  background: url(/images/editor/editor-shadow.png) no-repeat center bottom #F9FAF4;
 }
 .mce-btn-small i,
 .mce-menubtn.mce-btn-small span,
@@ -3555,7 +3555,7 @@ body {
   padding: 0px 3px;
   width: 100%;
   border: none;
-  background-color: #fbfcf7;
+  background-color: #fcfcfc;
 }
 #noteList {
   position: fixed;
@@ -3609,7 +3609,7 @@ body {
   color: #000;
 }
 #leanoteNav {
-  background-color: #fbfcf7;
+  background-color: #fcfcfc;
   opacity: 0.3;
 }
 .new-note-right {

@@ -1,0 +1,554 @@
+@media screen and (max-width: 700px) {
+  #toggleEditorMode,
+  #lea,
+  #myBlog,
+  #demoRegister,
+  .noteSplit,
+  #logo,
+  #tipsBtn,
+  #contentHistory,
+  #curNotebookForNewNote,
+  #curNotebookForNewSharedNote,
+  .for-split,
+  #listNotebookDropdownMenu,
+  #listShareNotebookDropdownMenu,
+  .new-markdown-text,
+  .new-note-text,
+  .username,
+  #notebookMin,
+  .ui-loader,
+  #md-section-helper,
+  .writing-mobile-hide,
+  .tips-ctn,
+  #wmd-undo-button,
+  #wmd-redo-button,
+  #wmd-hr-button,
+  #wmd-help-button {
+    display: none !important;
+  }
+  *,
+  .ztree li a.level0 span,
+  .ztree li a.level1 span {
+    font-size: 16px;
+  }
+  .label i {
+    opacity: 1;
+    width: 12px;
+  }
+  .label i:hover,
+  .label i:focus {
+    color: #659dbd !important;
+  }
+  #leftSwitcher:before {
+    content: "\f039";
+  }
+  a:focus,
+  a:hover,
+  a:active {
+    color: #659dbd !important;
+  }
+  #noteItemList .item {
+    height: 120px;
+  }
+  #leftNotebook {
+    width: 140px !important;
+    max-width: 140px;
+  }
+  #notebook {
+    display: block !important;
+  }
+  #leftNotebook .slimScrollDiv {
+    display: block !important;
+  }
+  #switcher {
+    padding-top: 0;
+    padding-right: 0;
+  }
+  #switcher i {
+    padding: 20px 0;
+    font-size: 20px;
+  }
+  #newNoteMarkdownBtn {
+    width: 10px;
+    overflow: hidden;
+  }
+  #noteAndEditor {
+    left: 140px !important;
+  }
+  #noteList {
+    display: block;
+    width: 100% !important;
+  }
+  #note {
+    visibility: hidden;
+    z-index: -1;
+    overflow-x: hidden;
+    left: 0 !important;
+    padding-left: 0;
+  }
+  #note #editor {
+    visibility: hidden;
+  }
+  #note .mce-tinymce {
+    visibility: hidden !important;
+  }
+  #note.editor-show {
+    visibility: visible;
+    z-index: initial;
+  }
+  #note.editor-show #editor {
+    visibility: visible;
+  }
+  #note.editor-show .mce-tinymce {
+    visibility: visible !important;
+  }
+  #leftSwitcher {
+    display: block !important;
+  }
+  #leftSwitcher2 {
+    display: none !important;
+  }
+  .full-editor #leftNotebook {
+    display: none;
+  }
+  .full-editor #noteAndEditor {
+    left: 0 !important;
+  }
+  .full-editor #noteList {
+    display: none;
+  }
+  #searchWrap {
+    margin-left: 3px;
+  }
+  #searchNote {
+    border-top: none;
+    border-bottom: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding-right: 10px;
+  }
+  #searchNote input {
+    width: 55px;
+    padding-left: 5px;
+    padding-right: 2px;
+    margin-top: 3px;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  #searchNote input:focus {
+    width: 100px;
+  }
+  #tool {
+    position: relative;
+  }
+  #tag {
+    position: absolute;
+    right: 124px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+  #tag #tags {
+    left: 50px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    position: absolute;
+    line-height: 40px;
+    line-height: inherit !important;
+  }
+  #tag #tagDropdown {
+    float: left;
+    width: 50px;
+    line-height: 40px;
+    overflow: hidden;
+    padding-left: 3px;
+  }
+  #tag .add-tag-text {
+    display: none;
+  }
+  #tag #addTagInput {
+    width: 30px;
+    display: inline-block;
+  }
+  #tag #tagColor {
+    display: none !important;
+  }
+  #left-column {
+    width: 100% !important;
+  }
+  #mdEditor #wmd-input * {
+    font-size: 14px;
+  }
+  .new-markdown-text-abbr,
+  .new-note-text-abbr {
+    display: inline;
+  }
+  .my-link {
+    display: block;
+  }
+  #themeForm img {
+    height: 70px !important;
+  }
+  .slimScrollBar,
+  .slimScrollRail {
+    display: none !important;
+  }
+  #noteItemList,
+  #notebook,
+  #leftNotebook,
+  .slimScrollDiv,
+  #editorContent_ifr,
+  .mce-edit-area,
+  .mce-container-body,
+  .mce-tinymce,
+  #editor .mce-ifr,
+  .wmd-input,
+  #noteReadContent,
+  #attachList,
+  #tags,
+  .wmd-input-section {
+    -webkit-overflow-scrolling: touch !important;
+    overflow: auto !important;
+  }
+  #attachMenu {
+    width: 320px;
+  }
+  #attachList {
+    max-height: 200px;
+  }
+  #attachList li .attach-title {
+    width: 170px;
+  }
+  #dropAttach .btn {
+    padding: 5px 3px;
+    margin-top: 3px;
+    display: block;
+  }
+  #myTag .folderBody li {
+    margin: 5px;
+  }
+  #myTag .folderBody li a:hover span {
+    color: #659dbd;
+  }
+  #noteItemList .item-thumb {
+    width: 80px;
+    height: 80px;
+    margin-top: 15px;
+  }
+  #noteItemList .item {
+    height: 118px;
+  }
+  #noteItemList .item-setting,
+  #noteItemList .item-blog {
+    font-size: 16px;
+    width: 30px;
+    display: inline-block;
+  }
+  #noteMaskForLoading {
+    opacity: 0.8;
+  }
+  #editorContent .ace-tomorrow {
+    padding: 0;
+  }
+  #note,
+  #editor,
+  #mdEditor {
+    left: 0;
+  }
+  #mdEditor #right-column {
+    display: none;
+  }
+  #mdEditor.read-only #left-column {
+    visibility: hidden;
+  }
+  #mdEditor.read-only #right-column {
+    left: 0 !important;
+    display: block;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  #mdEditor.read-only .preview-container {
+    left: 5px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #noteItemList,
+  #notebook,
+  #leftNotebook,
+  .slimScrollDiv,
+  #editorContent_ifr,
+  .mce-edit-area,
+  .mce-container-body,
+  .mce-tinymce,
+  #editor .mce-ifr,
+  .wmd-input,
+  #noteReadContent,
+  #attachList,
+  #tags {
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  #tag {
+    position: absolute;
+    right: 310px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    padding-left: 5px;
+  }
+  #tag #tagDropdown {
+    float: left;
+    width: 50px;
+    line-height: 40px;
+    overflow: hidden;
+    padding-left: 3px;
+  }
+  #tag .add-tag-text {
+    display: none;
+  }
+  #tag #addTagInput {
+    width: 30px;
+    display: inline-block;
+  }
+  #tag #tagColor {
+    display: none !important;
+  }
+  #tags {
+    left: 50px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    position: absolute;
+    line-height: 40px;
+    line-height: inherit !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  #noteItemList,
+  #notebook,
+  #leftNotebook,
+  .slimScrollDiv,
+  #editorContent_ifr,
+  .mce-edit-area,
+  .mce-container-body,
+  .mce-tinymce,
+  #editor .mce-ifr,
+  .wmd-input,
+  #noteReadContent,
+  #attachList,
+  #tags,
+  .wmd-input-section {
+    overflow: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  #lea,
+  .lea-blog,
+  #myBlog,
+  #demoRegister,
+  .noteSplit,
+  #tipsBtn,
+  #contentHistory,
+  #curNotebookForNewNote,
+  #curNotebookForNewSharedNote,
+  .for-split,
+  #listNotebookDropdownMenu,
+  #listShareNotebookDropdownMenu,
+  .username,
+  .ui-loader,
+  #md-section-helper {
+    display: none !important;
+  }
+  #tag {
+    position: absolute;
+    right: 124px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+  #tag #tags {
+    left: 50px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    position: absolute;
+    line-height: 40px;
+    line-height: inherit !important;
+  }
+  #tag #tagDropdown {
+    float: left;
+    width: 50px;
+    line-height: 40px;
+    overflow: hidden;
+    padding-left: 3px;
+  }
+  #tag .add-tag-text {
+    display: none;
+  }
+  #tag #addTagInput {
+    width: 30px;
+    display: inline-block;
+  }
+  #tag #tagColor {
+    display: none !important;
+  }
+  .my-link {
+    display: block;
+  }
+  #attachMenu {
+    width: 320px;
+  }
+  #attachList {
+    max-height: 200px;
+  }
+  #attachList li .attach-title {
+    width: 170px;
+  }
+  #dropAttach .btn {
+    padding: 5px 3px;
+    margin-top: 3px;
+    display: block;
+  }
+  #myTag .folderBody li {
+    margin: 5px;
+  }
+  #myTag .folderBody li a:hover span {
+    color: #659dbd;
+  }
+  #left-column {
+    width: 100% !important;
+  }
+  #mdEditor #wmd-input {
+    font-size: 14px;
+  }
+  .my-link {
+    display: block;
+  }
+  #themeForm img {
+    height: 70px !important;
+  }
+  #mdEditor #right-column {
+    display: none;
+  }
+  .wmd-button-bar-inner {
+    height: 30px;
+  }
+  #mdEditor.read-only #left-column {
+    visibility: hidden;
+  }
+  #mdEditor.read-only #right-column {
+    left: 0 !important;
+    display: block;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  #mdEditor.read-only .preview-container {
+    left: 10px;
+  }
+  #searchNote {
+    margin-top: 2px;
+  }
+  #tags .label,
+  #tags .label i {
+    font-size: 10px;
+  }
+  .mobile-hide {
+    display: none;
+  }
+  .mobile-show {
+    display: block;
+  }
+  #editorContent,
+  #mdEditor {
+    bottom: 0 !important;
+  }
+  #mdEditor .layout-wrapper-l3,
+  #editorContent {
+    margin-top: 0;
+    border: none;
+  }
+  .leanote-plugin #header {
+    height: 40px;
+  }
+  .leanote-plugin #mainContainer {
+    top: 40px;
+  }
+  .leanote-plugin .profile-img {
+    line-height: 37px;
+  }
+  .leanote-plugin #switcher i {
+    padding: 11px 0;
+  }
+  .leanote-plugin #searchNote {
+    padding-top: 1px;
+  }
+  .leanote-plugin #newNoteWrap {
+    line-height: 22px;
+  }
+  .leanote-plugin #leanoteMsg {
+    margin-top: 0;
+  }
+  .leanote-plugin *,
+  .leanote-plugin .ztree li a.level0 span,
+  .leanote-plugin .ztree li a.level1 span,
+  .leanote-plugin #noteItemList .item-setting,
+  .leanote-plugin #noteItemList .item-blog {
+    font-size: 14px;
+  }
+  .leanote-plugin .leanoteNav h1 {
+    font-size: 16px;
+  }
+  .leanote-plugin h1 {
+    font-size: 24px;
+  }
+  .leanote-plugin h2 {
+    font-size: 20px;
+  }
+  .leanote-plugin h3 {
+    font-size: 18px;
+  }
+  .leanote-plugin h4 {
+    font-size: 16px;
+  }
+  .leanote-plugin #noteItemList .item-setting,
+  .leanote-plugin #noteItemList .item-blog {
+    width: 23px;
+    padding: 1px;
+  }
+  .leanote-plugin #noteItemList .item {
+    height: 69px;
+  }
+  .leanote-plugin #noteItemList .item-thumb {
+    width: 60px;
+    height: 60px;
+    margin-top: 0px;
+  }
+  .leanote-plugin #preview-contents {
+    padding-left: 0;
+  }
+  .leanote-plugin #msg {
+    font-size: 12px;
+  }
+  .leanote-plugin #noteInfo {
+    width: 265px;
+  }
+  .leanote-plugin #noteInfo table th {
+    min-width: 72px;
+  }
+  .leanote-plugin #noteInfo .post-url-wrap span {
+    word-break: break-all;
+  }
+  .extension-preview-buttons {
+    border: none;
+  }
+}

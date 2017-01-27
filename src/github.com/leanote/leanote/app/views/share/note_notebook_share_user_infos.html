@@ -8,8 +8,8 @@
       
       <div class="modal-body">
       	<ul id="myTab" class="nav nav-tabs">
-			<li class="active"><a href="#baseInfo" data-toggle="tab">分享给好友</a></li>
-			<li class=""><a href="#groupInfo" data-toggle="tab">分享给项目组</a></li>
+			<li class="active"><a href="#baseInfo" data-toggle="tab">Share with friends</a></li>
+			<li class=""><a href="#groupInfo" data-toggle="tab">Share in Group</a></li>
 		</ul>
 	
 <div class="tab-content">
@@ -47,9 +47,9 @@
 		          	<td>{{$v.Email}}</td>
 		          	<td>
 		          		{{if eq $v.Perm 0}}
-		          			<a href="#" noteOrNotebookId="{{$noteOrNotebookId}}" perm="{{$v.Perm}}" toUserId="{{$toUserId}}" title="点击改变权限" class="btn btn-default change-perm">{{msg $ "readOnly"}}</a>
+		          			<a href="#" noteOrNotebookId="{{$noteOrNotebookId}}" perm="{{$v.Perm}}" toUserId="{{$toUserId}}" title="Click Change Permissions" class="btn btn-default change-perm">{{msg $ "readOnly"}}</a>
 		          		{{else}}
-		          			<a href="#" noteOrNotebookId="{{$noteOrNotebookId}}" perm="{{$v.Perm}}" toUserId="{{$toUserId}}" title="点击改变权限" class="btn btn-default change-perm">{{msg $ "writable"}}</a>
+		          			<a href="#" noteOrNotebookId="{{$noteOrNotebookId}}" perm="{{$v.Perm}}" toUserId="{{$toUserId}}" title="Click Change Permissions" class="btn btn-default change-perm">{{msg $ "writable"}}</a>
 		          		{{end}}
 		          	</td>
 		          	<td>
@@ -62,15 +62,15 @@
 	</div>
 	<div class="tab-pane" id="groupInfo">
 		<p>
-		将笔记/笔记本分享给项目组后, 该组下的用户便拥有了该笔记/笔记本. <a href="/member/group/index" target="_blank">项目组/成员管理</a>
+		When a note or notebook is shared with the project team, the user or group in the group owns the note or notebook. <a href="/member/group/index" target="_blank">Project Team/Member Management</a>
 		</p>
 		
 		<table class="table table-hover">
 	        <thead>
 	          <tr>
-	            <th>分组名</th>
+	            <th>Group Name</th>
 	            <th>{{msg . "permission"}}</th>
-	            <th width="150px">操作</th>
+	            <th width="150px">Operating</th>
 	          </tr>
 	        </thead>
 	        <tbody>
@@ -84,11 +84,11 @@
 	        		<label><input type="radio" name="perm_{{$groupId}}" {{if not $share.Perm}}checked="checked"{{end}} value="0" class="group-perm"> {{msg $ "readOnly"}}</label> 
 		        	<label><input type="radio" name="perm_{{$groupId}}" {{if $share.Perm}}checked="checked"{{end}} value="1" class="group-perm"> {{msg $ "writable"}}</label>
 	        	</td>
-        		<td> <!-- 有userId 证明已分享 -->
+        		<td> <!-- A userId certificate has been shared -->
         			{{if $share.UserId}}
-        				<button class="btn btn-success btn-share-or-not">已分享</button>
+        				<button class="btn btn-success btn-share-or-not">Shared</button>
         			{{else}}
-        				<button class="btn btn-default btn-share-or-not">未分享</button>
+        				<button class="btn btn-default btn-share-or-not">Not Shared</button>
         			{{end}}
         		</td>
 	        </tr>
@@ -144,10 +144,10 @@ $("#groupInfo").on("click", ".btn-share-or-not", function() {
 	ajaxPost(url, data, function(re) {
 		if(reIsOk(re)) {
 			if(!hasShared) {
-				var text = '<button class="btn btn-success btn-share-or-not">已分享</button>';
+				var text = '<button class="btn btn-success btn-share-or-not">Shared</button>';
 				$ptr.data('uid', 'xxxxxx');
 			} else {
-				var text = '<button class="btn btn-default btn-share-or-not">未分享</button>';
+				var text = '<button class="btn btn-default btn-share-or-not">Not Shared</button>';
 				$ptr.data('uid', '');
 			}
 			$ptd.html(text);
