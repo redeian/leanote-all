@@ -461,10 +461,12 @@ func (c Note) ExportPdf(noteId string) revel.Result {
 	cmd := exec.Command("/bin/sh", "-c", cc)
 	_, err := cmd.Output()
 	if err != nil {
+		LogJ("export pdf error. " + fmt.Sprintf("%v", err))
 		return c.RenderText("export pdf error. " + fmt.Sprintf("%v", err))
 	}
 	file, err := os.Open(path)
 	if err != nil {
+		LogJ("export pdf error. " + fmt.Sprintf("%v", err))
 		return c.RenderText("export pdf error. " + fmt.Sprintf("%v", err))
 	}
 	// http://stackoverflow.com/questions/8588818/chrome-pdf-display-duplicate-headers-received-from-the-server
@@ -476,6 +478,9 @@ func (c Note) ExportPdf(noteId string) revel.Result {
 	} else {
 		filenameReturn += ".pdf"
 	}
+
+	LogJ("--pdf done--")
+	LogJ(filenameReturn)
 	return c.RenderBinary(file, filenameReturn, revel.Attachment, time.Now()) // revel.Attachment
 }
 
