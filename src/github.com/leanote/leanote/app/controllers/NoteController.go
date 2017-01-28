@@ -3,14 +3,15 @@ package controllers
 import (
 	"github.com/revel/revel"
 	//	"encoding/json"
-	"github.com/leanote/leanote/app/info"
-	. "github.com/leanote/leanote/app/lea"
-	"gopkg.in/mgo.v2/bson"
 	"os"
 	"os/exec"
 	"regexp"
 	"strings"
 	"time"
+
+	"github.com/leanote/leanote/app/info"
+	. "github.com/leanote/leanote/app/lea"
+	"gopkg.in/mgo.v2/bson"
 	//	"github.com/leanote/leanote/app/types"
 	//	"io/ioutil"
 	"fmt"
@@ -405,6 +406,9 @@ func (c Note) ExportPdf(noteId string) revel.Result {
 		return c.RenderText("error")
 	}
 
+	LogJ("export pdf...")
+	LogJ(note.NoteId)
+
 	noteUserId := note.UserId.Hex()
 	// 是否有权限
 	if noteUserId != userId {
@@ -437,6 +441,9 @@ func (c Note) ExportPdf(noteId string) revel.Result {
 	if binPath == "" {
 		binPath = "/usr/local/bin/wkhtmltopdf"
 	}
+
+	LogJ("bin path")
+	LogJ(binPath)
 
 	url := configService.GetSiteUrl() + "/note/toPdf?noteId=" + noteId + "&appKey=" + appKey
 	//	cc := binPath + " --no-stop-slow-scripts --javascript-delay 10000 \"" + url + "\"  \"" + path + "\"" //  \"" + cookieDomain + "\" \"" + cookieName + "\" \"" + cookieValue + "\""
